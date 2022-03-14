@@ -7,7 +7,7 @@ if($_SERVER['REQUEST_METHOD']=="POST") {
 
     if($email) {
         $ret = $conn->query("select id from register where email='$email' || password='$password'");
-        $ret = $conn->query("select id from register where  password='$password'");
+        //$ret = $conn->query("select id from register where  password='$password'");
         $result = mysqli_fetch_array($ret);
         if ($result > 0) {
            // echo "<script>alert('welcome user')</script>";
